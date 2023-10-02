@@ -22,9 +22,12 @@ def chat(letter):
     ans = you_message(text=text, out_type="string")
     ans = re.sub("\(.*?\)", "", ans)
     cmd.insert(END, ans+"\n")
-    print(ans)
+    print(ans+"\n")
 
     pyttsx3.speak(ans)
+
+def temp(idk):
+    print(idk)
 
 Label(root, text="Choose the Alphabet of your Choice", font=("Raleway", 20), bg="black", fg="white", height="1").place(x=130, y=1)
 
@@ -54,5 +57,32 @@ Button(root, text="W", command=partial(chat, "W"), width="5", height="1").place(
 Button(root, text="X", command=partial(chat, "X"), width="5", height="1").place(x=260, y=135)
 Button(root, text="Y", command=partial(chat, "Y"), width="5", height="1").place(x=320, y=135)
 Button(root, text="Z", command=partial(chat, "Z"), width="5", height="1").place(x=380, y=135)
+
+root.bind('<a>', lambda e:chat("A"))
+root.bind('<b>', lambda e:chat("B"))
+root.bind('<c>', lambda e:chat("C"))
+root.bind('<d>', lambda e:chat("D"))
+root.bind('<e>', lambda e:chat("E"))
+root.bind('<f>', lambda e:chat("F"))
+root.bind('<g>', lambda e:chat("G"))
+root.bind('<h>', lambda e:chat("H"))
+root.bind('<i>', lambda e:chat("I"))
+root.bind('<j>', lambda e:chat("J"))
+root.bind('<k>', lambda e:chat("K"))
+root.bind('<l>', lambda e:chat("L"))
+root.bind('<m>', lambda e:chat("M"))
+root.bind('<n>', lambda e:chat("N"))
+root.bind('<o>', lambda e:chat("O"))
+root.bind('<p>', lambda e:chat("P"))
+root.bind('<q>', lambda e:chat("Q"))
+root.bind('<r>', lambda e:chat("R"))
+root.bind('<s>', lambda e:chat("S"))
+root.bind('<t>', lambda e:chat("T"))
+root.bind('<u>', lambda e:chat("U"))
+root.bind('<v>', lambda e:chat("V"))
+root.bind('<w>', lambda e:chat("W"))
+root.bind('<x>', lambda e:chat("X"))
+root.bind('<y>', lambda e:chat("Y"))
+root.bind('<z>', lambda e:chat("Z"))
 
 root.mainloop()
